@@ -1,0 +1,26 @@
+{
+  "name": "speakingtablet-server",
+  "version": "1.0.0",
+  "description": "the server for a speaking tablet app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgretz/SpeakingTablet.git"
+  },
+  "author": "Josh Gretz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgretz/SpeakingTablet/issues"
+  },
+  "homepage": "https://github.com/jgretz/SpeakingTablet#readme",
+  "dependencies": {
+    "express-magic-mvc": "git+https://github.com/jgretz/express-magic-mvc.git",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
