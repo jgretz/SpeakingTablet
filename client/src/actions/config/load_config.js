@@ -1,4 +1,4 @@
-import { loadFromStorage, CONFIG_KEY } from '../support';
+import { loadFromStorage, CONFIG_KEY } from '../../support';
 
 export const LOAD_CONFIG_SUCCESS = 'LOAD_CONFIG_SUCCESS';
 export const LOAD_CONFIG_FAIL = 'LOAD_CONFIG_FAIL';

@@ -1,4 +1,4 @@
-import { saveToStorage, CONFIG_KEY } from '../support';
+import { saveToStorage, CONFIG_KEY } from '../../support';
 
 export const STORE_CONFIG_SUCCESS = 'STORE_CONFIG_SUCCESS';
 export const STORE_CONFIG_FAIL = 'STORE_CONFIG_FAIL';

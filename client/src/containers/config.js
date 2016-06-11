@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 import { reduxForm } from 'redux-form';
 
 import { Button } from '../controls';
-import { loadConfig, saveConfig } from '../actions';
+import { loadConfig, saveConfig, markConfigSet } from '../actions';
 import { logError } from '../support';
 
 const styles = StyleSheet.create({
@@ -38,9 +38,7 @@ class ConfigClass extends Component {
   }
 
   configure = (form) => {
-    this.props.saveConfig(form).then(() => {
-      console.log(this.props.config);
-    }).catch(logError);
+    this.props.saveConfig(form).then(this.props.markConfigSet()).catch(logError);
   }
 
   render() {
@@ -73,6 +71,7 @@ ConfigClass.propTypes = {
 
   loadConfig: PropTypes.func.isRequired,
   saveConfig: PropTypes.func.isRequired,
+  markConfigSet: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -83,4 +82,4 @@ const mapStateToProps = state => ({
 export const Config = reduxForm({
   form: 'Config',
   fields: ['ipAddress', 'mdAddress'],
-}, mapStateToProps, { loadConfig, saveConfig })(ConfigClass);
+}, mapStateToProps, { loadConfig, saveConfig, markConfigSet })(ConfigClass);
